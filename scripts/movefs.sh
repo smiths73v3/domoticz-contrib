@@ -1,4 +1,4 @@
-for D in /home /var /root
+for D in /var /root /home
 do
 	mv -v ${D} ${D}_org
 	cd ${D}_org

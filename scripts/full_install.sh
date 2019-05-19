@@ -29,6 +29,4 @@ echo "Long Operation in progress, moving filesystems"
 mount /home
 mount /root
 mount /var
-mount -v | grep "overlay"
-
 
