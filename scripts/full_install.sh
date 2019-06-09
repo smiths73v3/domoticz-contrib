@@ -8,7 +8,7 @@ systemctl disable dphys-swapfile
 wget https://github.com/smiths73v3/overlayFS/raw/master/scripts/get_files.sh
 chmod a+rx get_files.sh
 ./get_files.sh
-apt-get install fuse lsof
+apt-get -y install fuse lsof
 
 #start the installs
 ./install_parts.sh
@@ -29,4 +29,6 @@ echo "Long Operation in progress, moving filesystems"
 mount /home
 mount /root
 mount /var
+mount /etc
 
+echo "Install Complete, reboot to continue"
