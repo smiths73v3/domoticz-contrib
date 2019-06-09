@@ -29,6 +29,5 @@ echo "Long Operation in progress, moving filesystems"
 mount /home
 mount /root
 mount /var
-mount /etc
 
 echo "Install Complete, reboot to continue"
