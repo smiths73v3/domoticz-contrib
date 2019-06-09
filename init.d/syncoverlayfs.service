@@ -1,7 +1,7 @@
 [Unit]
 Description=Sync Overlay Filesystems 
 # Change the below line to contain all overlayfs mounts
-RequiresMountsFor=/var /home /root
+RequiresMountsFor=/var /home /root /etc
 
 [Service]
 ExecStart=/etc/init.d/saveoverlays start
