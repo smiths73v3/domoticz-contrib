@@ -1,2 +1,5 @@
-# domoticz-contrib
-Contribution / added files for Domoticz home automation
+# Zynthain overlayFS 
+Files required to bring in overlayFS functionality to Zynthian
+in hopes to reduce writes to SD cards, and prevent corruption
+on unexpected power-down.
+
