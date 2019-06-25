@@ -6,7 +6,12 @@ cp rootro /usr/local/bin/
 ln -s rootro /usr/local/bin/rootrw 
 cp syncoverlayfs.service /lib/systemd/system/
 
-mv /etc/wpa_supplicant/wpa_supplicant.conf /var/local/
+if [ -f /etc/wpa_supplicant/wpa_supplicant.conf ]
+then
+	mv /etc/wpa_supplicant/wpa_supplicant.conf /var/local/
+else
+	touch /var/local/wpa_supplicant.conf
+fi
 ln -s /var/local/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf
 mv /etc/resolv.conf /var/local/
 ln -s /var/local/resolv.conf /etc/resolv.conf
@@ -18,4 +23,3 @@ ln -s /var/local/fake-hwclock.data /etc/fake-hwclock.data
 touch /var/local/mtab
 rm /etc/mtab
 ln -s /var/local/mtab /etc/mtab
-
